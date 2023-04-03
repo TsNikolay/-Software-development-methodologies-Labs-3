@@ -1,0 +1,25 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Lab3 JS part",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TsNikolay/-Software-development-methodologies-Labs-3.git"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "Tsaryk Mykola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TsNikolay/-Software-development-methodologies-Labs-3/issues"
+  },
+  "homepage": "https://github.com/TsNikolay/-Software-development-methodologies-Labs-3#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
