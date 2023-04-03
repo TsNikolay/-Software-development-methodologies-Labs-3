@@ -1,13 +1,18 @@
-FROM golang:1.20.2
+FROM golang:1.20.2 AS builder 
 
 WORKDIR /app
 
 COPY go.mod go.sum /app/
-
 RUN go mod download
 
 COPY . .
 
-RUN go build -o build/fizzbuzz
+RUN CGO_ENABLED=0 go build -o build/fizzbuzz
 
-CMD ["./build/fizzbuzz", "serve", "--port=8080"]
+FROM scratch
+
+COPY --from=builder /app/build/fizzbuzz /fizzbuzz
+
+COPY --from=builder /app/templates /templates
+
+CMD ["/fizzbuzz", "serve", "--port=8080"]
