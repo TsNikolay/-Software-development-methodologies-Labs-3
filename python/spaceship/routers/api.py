@@ -10,4 +10,6 @@ def hello_world() -> dict:
         'Sex': 'Male',
         'Nationality': 'Ukr',
         'DocumentID': '12345678',
+        'Speciality': 'Web-developer',
+        'Languages': 'JavaScript, HTML, CSS'
     }
